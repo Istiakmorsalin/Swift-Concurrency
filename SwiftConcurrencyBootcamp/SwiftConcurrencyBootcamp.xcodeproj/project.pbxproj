@@ -11,6 +11,7 @@
 		2915D4BD2C06C6FB00B3B73D /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D4BC2C06C6FB00B3B73D /* ContentView.swift */; };
 		2915D4BF2C06C6FD00B3B73D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2915D4BE2C06C6FD00B3B73D /* Assets.xcassets */; };
 		2915D4C22C06C6FD00B3B73D /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2915D4C12C06C6FD00B3B73D /* Preview Assets.xcassets */; };
+		2915D4C92C06C76A00B3B73D /* DoCatchTryThrowsBootcamp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2915D4C82C06C76A00B3B73D /* DoCatchTryThrowsBootcamp.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +20,7 @@
 		2915D4BC2C06C6FB00B3B73D /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2915D4BE2C06C6FD00B3B73D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2915D4C12C06C6FD00B3B73D /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		2915D4C82C06C76A00B3B73D /* DoCatchTryThrowsBootcamp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DoCatchTryThrowsBootcamp.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +54,7 @@
 			isa = PBXGroup;
 			children = (
 				2915D4BA2C06C6FB00B3B73D /* SwiftConcurrencyBootcampApp.swift */,
+				2915D4C82C06C76A00B3B73D /* DoCatchTryThrowsBootcamp.swift */,
 				2915D4BC2C06C6FB00B3B73D /* ContentView.swift */,
 				2915D4BE2C06C6FD00B3B73D /* Assets.xcassets */,
 				2915D4C02C06C6FD00B3B73D /* Preview Content */,
@@ -137,6 +140,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2915D4C92C06C76A00B3B73D /* DoCatchTryThrowsBootcamp.swift in Sources */,
 				2915D4BD2C06C6FB00B3B73D /* ContentView.swift in Sources */,
 				2915D4BB2C06C6FB00B3B73D /* SwiftConcurrencyBootcampApp.swift in Sources */,
 			);
