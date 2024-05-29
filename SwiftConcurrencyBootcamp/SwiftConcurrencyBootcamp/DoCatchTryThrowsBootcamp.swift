@@ -15,11 +15,27 @@ class DoCatchTryThrowsBootcampDataManager {
     
     let isActive: Bool = false
     
-    func getTitle() -> (title: String?, error: Error?) {
+//    func getTitle() -> (title: String?, error: Error?) {
+//        if isActive {
+//            return ("new string", nil)
+//        } else {
+//            return (nil, URLError(.badURL))
+//        }
+//    }
+    
+    func getTitle() -> Result<String, Error> {
         if isActive {
-            return ("new string", nil)
+            return .success("NEW TEXT!")
         } else {
-            return (nil, URLError(.badURL))
+            return .failure(URLError(.badURL))
+        }
+    }
+    
+    func getTitle3() throws -> String {
+        if isActive {
+            return "New Text!"
+        } else {
+            throw URLError(.badServerResponse)
         }
     }
 }
@@ -30,10 +46,32 @@ class DoCatchTryThrowsBootcampViewModel: ObservableObject {
     let manager = DoCatchTryThrowsBootcampDataManager()
     
     func fetchTitle() {
-       let returnedValue =  manager.getTitle()
-        if let newTitle = returnedValue.title {
+//       let returnedValue =  manager.getTitle()
+//        if let newTitle = returnedValue.title {
+//            self.text = newTitle
+//        } else if let error = returnedValue.error {
+//            self.text = error.localizedDescription
+//        }
+        
+//        let result = manager.getTitle()
+//        
+//        switch result {
+//        case .success(let newTitle):
+//            self.text = newTitle
+//        case .failure(let error):
+//            self.text = error.localizedDescription
+//        }
+        
+        let newTitle = try? manager.getTitle3()
+        
+        if let newTitle = newTitle { 
             self.text = newTitle
-        } else if let error = returnedValue.error {
+        }
+        
+        do {
+            let newTitle = try manager.getTitle3()
+            self.text = newTitle
+        } catch let error {
             self.text = error.localizedDescription
         }
     }
